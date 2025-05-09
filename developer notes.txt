@@ -1,0 +1,29 @@
+LOCAL GIT
+------------
+1. Make sure Terminal is pointed to the theme folder. Check using "pwd" in Terminal.
+2. Type "git init" to create new local git repo site.
+3. "git status" to confirm files to commit.
+4. "git add -A" to add all files listed in #3 above to staging; else "git add [filename]" to add indiv files.
+5. "git commit -m 'description of purpose' to commit a copy of staged files to local repo.
+
+REMOTE GIT
+-----------
+1. Type "git remote add origin [github repo URL]" to establish remote location on Github.
+2. "git remote -v" to confirm remote location.
+3. "git push origin master" to push copy to remote.
+
+WORK WITH BRANCH
+-----------------
+1. "git branch” will list all branches. Initially, only “master” branch.
+2. "git status" to ensure there are no commits needed. Otherwise see steps above.
+3. "git branch [name of new branch]" to create a branch.
+4. To commit an active branch, "git commit -am 'description of purpose' to stage and commit in single command.
+5. "git push origin [branch name]" to push branch to remote location.
+6. "git merge [branch name]" to merge into master.
+7. "git branch -d [branch name]" to delete branch.
+8. "git checkout -b [branch name]" to establish and checkout new branch in single command. Unsaved changes will be lost.
+9. "git branch -a" to list all branches.
+10."git checkout [branch name]". Unsaved changes will be lost.
+11. "git branch" to confirm which branch you are working on.
+
+
