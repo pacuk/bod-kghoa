@@ -1,5 +1,6 @@
 :root {
     --header-bg-color:#f8f5f1;
+    --link-hover-color:rgb(153, 22, 22);
 }
 
 .bg-yellow {
@@ -7,9 +8,22 @@
 }
 
 .sectionContainer {
-    padding: 2rem 0 2rem 2rem;
+    padding: 1rem 0 2rem 2rem;
 }
 
 .subSectionContainer {
     margin: 1.5rem 0 1.5rem 1.5rem;
+}
+
+li.nav-item a.nav-link {
+    font-weight: 400;
+}
+
+li.nav-item a.nav-link.active {
+    font-weight: 600;
+}
+
+li.nav-item a.nav-link:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
 }

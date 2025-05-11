@@ -27,3 +27,4 @@ WORK WITH BRANCH
 11. "git branch" to confirm which branch you are working on.
 
 
+cd wp-content\themes\bod-theme\
