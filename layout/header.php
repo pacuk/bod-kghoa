@@ -1,5 +1,5 @@
     <!-- Top navbar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-yellow border-bottom border-secondary">
+    <nav class="navbar navbar-expand-md navbar-light bg-yellow">
         <div class="container-fluid position-relative">
         <!-- Hamburger toggler: only visible on small screens -->
         <button class="btn btn-outline-secondary me-2 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
@@ -7,13 +7,13 @@
         </button>
 
         <!-- Brand (logo + company name) centered -->
-        <a class="navbar-brand d-flex align-items-center position-absolute start-50 translate-middle-x" href="#" style="white-space: nowrap;">
-            <img <img src="img/kg-coat-of-arms.png" alt="Logo" width="50" height="50" class="me-2">
+        <a class="navbar-brand d-flex align-items-center position-absolute start-50 translate-middle-x" href="dashboard.php" style="white-space: nowrap;">
+            <img src="img/kg-coat-of-arms.png" alt="Logo" width="50" height="50" class="mx-2">
             <span class="d-none d-md-block">Board of Directors</span>
         </a>
 
         <!-- Login/Logout button: always on the right -->
-        <a class="btn btn-primary ms-auto" role="button" type="button">Login</a>
+        <a class="btn btn-primary ms-auto" role="button" type="button">Logout</a>
         </div>
     </nav>
 
@@ -36,7 +36,7 @@
     <!-- Main layout: sidebar + content -->
     <div class="d-flex">
         <!-- Static sidebar: visible md+ -->
-        <nav class="d-none d-md-block bg-yellow vh-100 border-end border-secondary" style="width: 250px;">
+        <nav class="d-none d-md-block bg-yellow vh-100" style="width: 250px;">
             <ul class="nav flex-column p-3">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="dashboard.php">Home</a>

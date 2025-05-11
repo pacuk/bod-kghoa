@@ -1,10 +1,55 @@
-:root {
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100..700&display=swap);
+
+:root, [data-bs-theme=light] {
+    --bs-font-sans-serif:"Roboto Flex",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --bs-font-serif:"Times New Roman", "Courier New", serif;
+    --bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-body-font-family:var(--bs-font-sans-serif);
+    --bs-body-font-size:1.125rem;
+    --bs-body-font-weight:300;
     --header-bg-color:#f8f5f1;
     --link-hover-color:rgb(153, 22, 22);
+    --light-border:solid #dee2e6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation */
+li.nav-item a.nav-link {
+    font-weight: 400;
+    color:#000000;
+}
+
+a:hover, li.nav-item a.nav-link:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+li.nav-item a.nav-link.active {
+    font-weight: 600;
+}
+
+
+h2, h3, h4 {
+    font-family: var(--bs-font-serif);
+}
+
+.btn:focus, a.btn:focus, button, button.accordion-button:focus {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .bg-yellow {
     background-color: var(--header-bg-color);
+}
+
+.table-wrap {
+    position: relative;
+    padding:1rem;
+    border: var(--light-border);
 }
 
 .sectionContainer {
@@ -15,15 +60,17 @@
     margin: 1.5rem 0 1.5rem 1.5rem;
 }
 
-li.nav-item a.nav-link {
-    font-weight: 400;
+#allRequests h2.accordion-header button.accordion-button:not(.collapse) {
+    background-color: #cfe2ff;
+    border:solid 1px #a2bdd4;
 }
 
-li.nav-item a.nav-link.active {
+button.accordion-button {
     font-weight: 600;
+    font-size: 1.375rem;
 }
 
-li.nav-item a.nav-link:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
+table.property-improvement-requests tbody tr td span.badge{
+    padding:.375rem .5rem .4rem .5rem;
+    min-width: 6rem;
 }

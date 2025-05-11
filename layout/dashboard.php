@@ -14,30 +14,30 @@
                 <h2><a href="property-improvement-requests.php">Property Improvement Requests</a></h2>
                 <div class="subSectionContainer">
                     <div class="ps-1">ACTIVE SUBMISSIONS</div>
-                    <div class="projectItem table-responsive">
-                        <table class="table">
+                    <!--<div class="ps-1 fw-bold">There are no active submissions at this time.</div>-->
+                    
+                    <div class="table-responsive">
+                        <table class="table">                    
                             <thead>
                                 <tr>
-                                    <th scope="col" style="width: 100px;">Date Added</th>
-                                    <th scope="col" style="width: 190px;">Address</th>
+                                    <th scope="col" style="width: 100px;">Date</th>
                                     <th scope="col">Description</th>
                                     <th scope="col">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>05-05-2025</td>
-                                    <td>4386 Haverstock Circle</td>
-                                    <td>Lot 207 – Lunsford Pool Fencing & Playset</td>
+                                    <td>05/05/2025</td>
+                                    <td>Lot 207 - Lunsford Pool Fencing & Playset</td>
                                     <td>Under Review</td>
                                 </tr>
                                 <tr>
-                                    <td>05-05-2025</td>
-                                    <td>5633 Stones Crossing Rd</td>
-                                    <td>Lot 208 – Beeson Pool & Landscape</td>
+                                    <td>05/05/2025</td>
+                                    <td>Lot 208 - Beeson Pool & Landscape</td>
                                     <td>Ratification Needed</td>
                                 </tr>
                             </tbody>
+                            
                         </table>
                     </div>
                 </div>
