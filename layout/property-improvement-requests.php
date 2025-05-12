@@ -53,7 +53,7 @@
                                                 </div>
                                             </td>
                                             <td><span class="badge bg-secondary">Under Review</span></td>
-                                            <td><a href="#" class="stretched-link"></a></td>
+                                            <td><a href="project.php" class="stretched-link"></a></td>
                                         </tr>
                                         <tr class="position-relative">
                                             <td>05/05/2025</td>
@@ -66,7 +66,7 @@
                                                 </div>
                                             </td>
                                             <td><span class="badge bg-warning">On Hold</span></td>
-                                            <td><a href="#" class="stretched-link"></a></td>
+                                            <td><a href="project.php" class="stretched-link"></a></td>
                                         </tr>
                                         <tr class="position-relative">
                                             <td>05/05/2025</td>
@@ -92,7 +92,7 @@
                                                 </div>
                                             </td>
                                             <td><span class="badge bg-danger">Canceled</span></td>
-                                            <td><a href="#" class="stretched-link"></a></td>
+                                            <td><a href="project.php" class="stretched-link"></a></td>
                                         </tr>
                                         <tr class="position-relative">
                                             <td>05/05/2025</td>
@@ -105,7 +105,7 @@
                                                 </div>
                                             </td>
                                             <td><span class="badge bg-dark">Ratification Needed</span></td>
-                                            <td><a href="#" class="stretched-link"></a></td>
+                                            <td><a href="project.php" class="stretched-link"></a></td>
                                         </tr>
                                     </tbody>
                                     

@@ -8,12 +8,17 @@
     --bs-body-font-size:1.125rem;
     --bs-body-font-weight:300;
     --header-bg-color:#f8f5f1;
+    --bod-color-blue: rgb(13,110,253);
     --link-hover-color:rgb(153, 22, 22);
     --light-border:solid #dee2e6;
 }
 
 a {
     text-decoration: none;
+}
+
+.border-bod-blue {
+    border-color: var(--bod-color-blue)!important;
 }
 
 /* Navigation */
@@ -32,7 +37,7 @@ li.nav-item a.nav-link.active {
 }
 
 
-h2, h3, h4 {
+h1,h2, h3, h4 {
     font-family: var(--bs-font-serif);
 }
 
@@ -73,4 +78,15 @@ button.accordion-button {
 table.property-improvement-requests tbody tr td span.badge{
     padding:.375rem .5rem .4rem .5rem;
     min-width: 6rem;
+}
+table.projectReview tbody th, table.projectReview tbody td {
+    vertical-align: top;
+}
+table.projectReview tbody th {
+    text-align: right;
+    padding-right:1rem;
+}
+
+table.projectReview tbody tr.decisionData th,table.projectReview tbody tr.decisionData td  {
+    padding-top:1rem;
 }
