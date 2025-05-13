@@ -9,6 +9,7 @@
     --bs-body-font-weight:300;
     --header-bg-color:#f8f5f1;
     --bod-color-blue: rgb(13,110,253);
+    --bod-color-dkblue: rgb(7, 70, 163);
     --link-hover-color:rgb(153, 22, 22);
     --light-border:solid #dee2e6;
 }
@@ -19,6 +20,14 @@ a {
 
 .border-bod-blue {
     border-color: var(--bod-color-blue)!important;
+}
+
+.bg-dark-blue {
+    background-color: var(--bod-color-dkblue);
+}
+
+.copyright {
+    font-size: 0.875rem;
 }
 
 /* Navigation */
@@ -41,10 +50,10 @@ h1,h2, h3, h4 {
     font-family: var(--bs-font-serif);
 }
 
-.btn:focus, a.btn:focus, button, button.accordion-button:focus {
+.btn:focus, a.btn:focus, button, button.accordion-button:focus, select:focus {
     outline: 0;
     -webkit-box-shadow: none;
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
 .bg-yellow {
@@ -90,3 +99,47 @@ table.projectReview tbody th {
 table.projectReview tbody tr.decisionData th,table.projectReview tbody tr.decisionData td  {
     padding-top:1rem;
 }
+
+.bg-dark-blue a, .bg-dark-blue a:hover, .bg-dark a, .bg-dark a:hover {
+    color:#ffffff;
+}
+
+.comment-metadata a, .comment-metadata a:hover, .comment-metadata a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+.comment-metadata {
+    font-style: italic;
+    padding-bottom: .25rem;
+    font-size: 0.875rem;
+}
+
+table#tbl-compliance {
+    font-size: 0.95rem;
+}
+
+.select-custom {
+    max-width: 200px;
+    background-color:rgba(0,0,0,0.7) !important;
+    color: #fff !important;
+    border: none;
+}
+
+/*.select-custom:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0,0,0,1) !important;
+    outline: none;
+}*/
+
+/* Style the <option>s in the dropdown */
+.select-custom option {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Hover/focus state on options 
+.select-custom option:hover,
+.select-custom option:focus {
+    background-color: rgba(0,0,0,0.5) !important;
+    color: #fff;
+}
+*/

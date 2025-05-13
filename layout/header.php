@@ -34,9 +34,9 @@
     </div>
 
     <!-- Main layout: sidebar + content -->
-    <div class="d-flex">
+    <div class="d-flex align-items-stretch">
         <!-- Static sidebar: visible md+ -->
-        <nav class="d-none d-md-block bg-yellow vh-100" style="width: 250px;">
+        <nav class="d-none d-md-block bg-yellow min-vh-100" style="width: 250px;">
             <ul class="nav flex-column p-3">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="dashboard.php">Home</a>
@@ -45,7 +45,7 @@
                     <a class="nav-link" href="property-improvement-requests.php">Property Improvement Requests</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="owners.php">Property Owners</a>
+                    <a class="nav-link" href="owners.php">Lot Owners</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="board-proposals.php">Board Proposals</a>
@@ -60,7 +60,7 @@
         </nav>
 
         <!-- Page content -->
-        <main class="flex-grow-1 p-3">
+        <main class="flex-grow-1 p-3 border-top border-bottom border-start">
         
 
     <!--    <nav class="navbar navbar-expand-lg navbar-light bg-yellow border-bottom border-secondary-subtle">
