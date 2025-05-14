@@ -80,6 +80,19 @@
                                         <td><span class="badge bg-success">Approved</span></td>
                                         <td><a href="proposal.php" class="stretched-link"></a></td>
                                     </tr>
+                                    <tr class="position-relative">
+                                        <td>06/20/2025</td>
+                                        <td>Aliquam lorem ante</td>
+                                        <td>
+                                            <div class="d-flex justify-content-around">
+                                                <div>1</div>
+                                                <div>5</div>
+                                                <div>1</div>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge bg-danger">Rejected</span></td>
+                                        <td><a href="proposal.php" class="stretched-link"></a></td>
+                                    </tr>
                                 </tbody>
                                 
                             </table>

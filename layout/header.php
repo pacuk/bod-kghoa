@@ -39,7 +39,7 @@
         <nav class="d-none d-md-block bg-yellow min-vh-100" style="width: 250px;">
             <ul class="nav flex-column p-3">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="dashboard.php">Home</a>
+                    <a class="nav-link active" aria-current="page" href="dashboard.php">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="property-improvement-requests.php">Property Improvement Requests</a>
