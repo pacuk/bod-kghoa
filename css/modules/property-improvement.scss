@@ -1,0 +1,20 @@
+.page-property-improvement-requests {
+    ul.nav-pills a.nav-link {
+        font-weight: 600;
+        color: rgb(13,110,253);
+        font-size: 1.25rem;
+        &.active,.active:hover{
+            color:#ffffff;
+        }
+    }
+
+    table.table-inactive-requests th, table.table-inactive-requests td{
+        color:rgb(108,117,125) ;
+    }
+
+    table tbody th, table tbody td {
+        vertical-align: baseline;
+    }
+
+}
+

@@ -1,0 +1,38 @@
+.select-custom {
+    max-width: 200px;
+    background-color:rgba(0,0,0,0.7) !important;
+    color: #fff !important;
+    border: none;
+}
+
+.select-custom option {
+    background-color: #fff;
+    color: #000;
+}
+
+
+table#tbl-compliance {
+    font-size: 0.95rem;
+}
+
+table#tbl-compliance.table tbody tr.clickable {
+    cursor: pointer;
+}
+
+table#tbl-compliance.table tbody tr td.action-data {
+    background-color: rgb(232, 234, 235);
+    padding:1.25rem 1.25rem 0.5rem 0.5rem;
+}
+
+table#tbl-compliance.table tbody tr td.action-data div{
+    padding-bottom: 0.5rem;
+}
+
+table#tbl-compliance.table tbody tr td:first-of-type, table#tbl-compliance.table tbody tr td.action-data table tr td:first-of-type {
+    text-wrap:nowrap;
+}
+
+table#tbl-compliance.table tbody tr td.no-action-data {
+    background-color: rgb(232, 234, 235);
+    padding-left: 1rem;
+}

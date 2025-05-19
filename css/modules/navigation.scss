@@ -1,0 +1,17 @@
+.bg-yellow {
+    background-color: var(--header-bg-color);
+}
+
+li.nav-item a.nav-link {
+    font-weight: 400;
+    color:#000000;
+}
+
+li.nav-item a.nav-link:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+li.nav-item a.nav-link.active {
+    font-weight: 600;
+}
