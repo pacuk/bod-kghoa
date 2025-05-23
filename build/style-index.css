@@ -479,6 +479,43 @@ table#tbl-compliance.table tbody tr td.no-action-data {
 .page-lot-owners table tbody tr > td {
   vertical-align: baseline;
 }
+.page-lot-owners .lot-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+.page-lot-owners .lot-table th,
+.page-lot-owners .lot-table td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  text-align: left;
+}
+.page-lot-owners .lot-table th {
+  background: #f4f4f4;
+}
+.page-lot-owners .pagination {
+  margin-top: 1em;
+  text-align: center;
+}
+.page-lot-owners .pagination .page-numbers {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 0.4em 0.8em;
+  border: 1px solid #ccc;
+}
+.page-lot-owners .pagination .current {
+  background: #0073aa;
+  color: #fff;
+  border-color: #0073aa;
+}
+.page-lot-owners .lot-search {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.page-lot-owners .lot-search input[type=\"text\"] {
+  padding: 0.4em;
+  width: 250px;
+}
 
 .page-board-proposals table thead tr > th {
   vertical-align: bottom;

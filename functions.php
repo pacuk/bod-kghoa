@@ -60,3 +60,6 @@ function bodkghoa_login_logo_url_title() {
     return 'Kensington Grove Board of Directors';
 }
 add_filter( 'login_headertext', 'bodkghoa_login_logo_url_title' );
+
+
+require get_theme_file_path('/includes/bod-contact-functions.php');

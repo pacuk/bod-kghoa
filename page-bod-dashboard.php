@@ -103,7 +103,18 @@ get_header( 'bod' );
                 <h2><a href="/bod-contact-information/">Board of Directors Contact Information</a></h2>
                 <div class="subSectionContainer">
                     <div class="board-members pt-3 mb-5">
-                        <div class="board-members-wrap table-responsive">
+
+                    <?php             
+            bodkghoa_display_users_table( array(
+                'office',
+                'phone_number',
+                'address',
+                'hoa_email',
+                'personal_email',
+                'term_expiration'
+            ));
+        ?>
+                     <!--<div class="board-members-wrap table-responsive">
                             <table id="bod-contact-info" class="table table-striped table-bordered">
                                 <thead class="table-secondary border-top border-secondary-subtle">
                                     <tr>
@@ -191,7 +202,7 @@ get_header( 'bod' );
                 
                                 </tbody>
                             </table>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
