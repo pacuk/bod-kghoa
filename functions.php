@@ -7,6 +7,10 @@ if ( ! function_exists( 'bodkghoa_enqueue_files' ) ):
         wp_enqueue_style('bodkghoa_main', get_theme_file_uri('/build/style-index.css'));
         //wp_enqueue_style('bodkghoa_style', get_theme_file_uri('/build/index.css'));
         wp_enqueue_script('bootstrap_js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js', array(), '5.3.6', true );
+
+        if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+            wp_enqueue_script( 'comment-reply' );
+        }   
     }
 endif;
     
@@ -61,5 +65,40 @@ function bodkghoa_login_logo_url_title() {
 }
 add_filter( 'login_headertext', 'bodkghoa_login_logo_url_title' );
 
+function bodkghoa_comment_reply_text( $link ) {
+$link = str_replace( 'Reply', 'Comment on this entry', $link );
+return $link;
+}
+add_filter( 'comment_reply_link', 'bodkghoa_comment_reply_text' );
+
+function kghoa_comment_form_defaults( $defaults ) {
+    global $user_identity;
+    $required_text      = ' ' . wp_required_field_message();
+    $defaults['logged_in_as'] = sprintf(
+        '<p class="logged-in-as">%s%s</p>',
+        sprintf(
+            __( 'Logged in as %1$s.' ),
+            $user_identity
+        ),
+        $required_text
+    );
+    return $defaults;
+}
+add_filter( 'comment_form_defaults', 'kghoa_comment_form_defaults' );
+
+add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+			'style',
+			'script',
+		)
+	);
+
+    
 
 require get_theme_file_path('/includes/bod-contact-functions.php');

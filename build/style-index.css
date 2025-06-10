@@ -379,6 +379,10 @@ table tr > th, table tr > td {
   border-color: --kg-border-light-grey;
 }
 
+textarea {
+  width: 100%;
+}
+
 /* load modules */
 .bg-yellow {
   background-color: var(--header-bg-color);
@@ -420,19 +424,45 @@ li.nav-item a.nav-link.active {
   vertical-align: baseline;
 }
 
-.page-property-improvement-requests ul.nav-pills a.nav-link {
+.page-property-improvement-requests ul.nav-pills .nav-link {
   font-weight: 600;
   color: rgb(13, 110, 253);
   font-size: 1.25rem;
 }
-.page-property-improvement-requests ul.nav-pills a.nav-link.active, .page-property-improvement-requests ul.nav-pills a.nav-link .active:hover {
+.page-property-improvement-requests ul.nav-pills .nav-link.active, .page-property-improvement-requests ul.nav-pills .nav-link .active:hover {
   color: #ffffff;
+}
+.page-property-improvement-requests table tr td:nth-child(2) {
+  max-width: 30% !important;
 }
 .page-property-improvement-requests table.table-inactive-requests th, .page-property-improvement-requests table.table-inactive-requests td {
   color: rgb(108, 117, 125);
 }
 .page-property-improvement-requests table tbody th, .page-property-improvement-requests table tbody td {
   vertical-align: baseline;
+}
+
+.page-project-detail .back-button-loc {
+  text-align: left;
+}
+@media (min-width: 992px) {
+  .page-project-detail .back-button-loc {
+    text-align: right;
+  }
+}
+.page-project-detail table#project_votes td.vote-cell {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.page-project-detail table#project_votes .form-check {
+  display: flex;
+  justify-content: center;
+}
+.page-project-detail .comment-form #submit.submit {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff;
+  padding: 0.6em 1em;
+  border-radius: 5px;
 }
 
 .select-custom {

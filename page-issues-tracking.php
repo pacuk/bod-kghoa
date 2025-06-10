@@ -12,7 +12,7 @@ get_header( 'bod' );
 ?>
 
         <div class="page-issues-tracking container-md mt-4 mb-5">
-            <h1 class="mt-4 mb-0">Issues Tracking</h1>
+            <h1 class="pt-4 mb-0">Issues Tracking</h1>
             <div class="fs-6 fw-normal fst-italic mb-5">Click row to reveal action</div>
             
             <div class="mb-4">

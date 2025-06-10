@@ -587,7 +587,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "homeowner-request"
+                "value": "project"
             }
         ]
     ],
@@ -600,5 +600,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748028938
+    "modified": 1748107763
 }

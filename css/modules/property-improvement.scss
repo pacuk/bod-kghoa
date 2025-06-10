@@ -1,11 +1,15 @@
 .page-property-improvement-requests {
-    ul.nav-pills a.nav-link {
+    ul.nav-pills .nav-link {
         font-weight: 600;
         color: rgb(13,110,253);
         font-size: 1.25rem;
         &.active,.active:hover{
             color:#ffffff;
         }
+    }
+
+    table tr td:nth-child(2){
+        max-width: 30% !important;
     }
 
     table.table-inactive-requests th, table.table-inactive-requests td{
