@@ -453,7 +453,8 @@ li.nav-item a.nav-link.active {
 .page-project-detail table#project_votes td.vote-cell {
   background-color: rgba(0, 0, 0, 0.25);
 }
-.page-project-detail table#project_votes .form-check {
+.page-project-detail table#project_votes td.vote-cell .form-check {
+  padding-right: 2;
   display: flex;
   justify-content: center;
 }

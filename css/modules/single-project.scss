@@ -8,12 +8,13 @@
     }
 
     table#project_votes {
-        td.vote-cell { background-color: rgba(0,0,0,0.25);}
-        .form-check {
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
+        td.vote-cell { 
+            background-color: rgba(0,0,0,0.25);
+            .form-check {
+                padding-left: 2;
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 

@@ -28,7 +28,7 @@ get_header( 'bod' );
                                 <tr>
                                     <th style="width: 100px;">Date</th>
                                     <th>Description</th>
-                                    <th>Status</th>
+                                    <th>Review Status</th>
                                     <th>&nbsp;</th>
                                 </tr>
                             </thead>
@@ -67,7 +67,7 @@ get_header( 'bod' );
                                 <tr>
                                     <th scope="col" style="width: 100px;">Date</th>
                                     <th scope="col">Description</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">Review Status</th>
                                     <th>&nbsp;</th>
                                 </tr>
                             </thead>
