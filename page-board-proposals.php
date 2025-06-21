@@ -10,9 +10,10 @@ if ( ! is_user_logged_in() ) {
 
 get_header( 'bod' );
 ?>
-
+<div>List stuff here</div>
+<!--
         <div class="page-board-proposals container-md mt-4 mb-5">
-            <h1 class="pt-4 mb-4">Board Proposals</h1>
+            <h1 class="pt-4 mb-4">Board Proposals 2</h1>
                   
             <div class="table-responsive">
                 <table class="table table-hover board-proposals table-sm">                    
@@ -91,5 +92,5 @@ get_header( 'bod' );
                 </table>
             </div>
    
-        </div>
+        </div> -->
 <?php get_footer();

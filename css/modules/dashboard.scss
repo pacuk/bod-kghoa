@@ -11,6 +11,16 @@
         margin: 1.5rem 0 1.5rem 1.5rem;
     }
 
+    table.property-improvement-requests, table.issues-tracking {
+        a {
+            text-decoration: none;
+            color:inherit;
+        }
+        tr:hover td {
+            color:rgb(13,110,253);
+        }
+    }
+
     table#bod-contact-info tr > th {
         vertical-align: bottom;
     }

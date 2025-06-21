@@ -52,7 +52,7 @@ if($status == 'Completed'){
 
 ?>
 
-    <div class="page-project-detail container-md mt-4 mb-5">
+    <div class="page-project-detail theme container-md mt-4 mb-5">
         <h4 class="pt-4"><span<?php echo $badgeClass;?>><?php echo $badgeText; ?></span></h4>
         <h1><?php the_title(); ?></h1>
 

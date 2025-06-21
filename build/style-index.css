@@ -417,6 +417,13 @@ li.nav-item a.nav-link.active {
 .page-bod-dashboard .subSectionContainer {
   margin: 1.5rem 0 1.5rem 1.5rem;
 }
+.page-bod-dashboard table.property-improvement-requests a, .page-bod-dashboard table.issues-tracking a {
+  text-decoration: none;
+  color: inherit;
+}
+.page-bod-dashboard table.property-improvement-requests tr:hover td, .page-bod-dashboard table.issues-tracking tr:hover td {
+  color: rgb(13, 110, 253);
+}
 .page-bod-dashboard table#bod-contact-info tr > th {
   vertical-align: bottom;
 }

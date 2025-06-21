@@ -25,10 +25,11 @@
                 "Secretary-Treasurer": "Secretary-Treasurer",
                 "Treasurer": "Treasurer"
             },
-            "default_value": false,
+            "default_value": "None",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
+            "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
             "placeholder": "",
@@ -232,14 +233,7 @@
             {
                 "param": "user_role",
                 "operator": "==",
-                "value": "subscriber"
-            }
-        ],
-        [
-            {
-                "param": "user_role",
-                "operator": "==",
-                "value": "administrator"
+                "value": "board_member"
             }
         ]
     ],
@@ -266,5 +260,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748028919
+    "modified": 1750275210
 }
