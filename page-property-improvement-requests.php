@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Property Improvement Requests
+ * Template Name: Property Improvement
  */
 
 if ( ! is_user_logged_in() ) {

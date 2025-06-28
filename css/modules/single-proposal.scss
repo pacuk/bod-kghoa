@@ -1,0 +1,13 @@
+.page-proposal-detail {
+
+    table#proposal_votes {
+        td.vote-cell { 
+            background-color: rgba(0,0,0,0.25);
+            .form-check {
+                padding-left: 2;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

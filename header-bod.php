@@ -44,9 +44,9 @@
         <ul class="nav flex-column">
             <li class="nav-item"><a class="nav-link" href="<?php echo site_url().'/bod-dashboard/';?>">Dashboard</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo site_url().'/property-improvement-requests/';?>">Property Improvement Requests</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo site_url().'/lot-owners/';?>">Lot Owners</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?php echo site_url().'/board-proposals/';?>">Board Proposals</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo site_url().'/issues-tracking/';?>">Issues Tracking</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo site_url().'/bod-proposals/';?>">Board Proposals</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?php echo site_url().'/lot-owners/';?>">Lot Owners</a></li>
             <li class="nav-item"><a class="nav-link" href="<?php echo site_url().'/bod-contact-information/';?>">BOD Contact Info</a></li>
         </ul>
         </div>
@@ -64,13 +64,13 @@
                     <a class="nav-link" href="<?php echo site_url().'/property-improvement-requests/';?>">Property Improvement Requests</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url().'/lot-owners/';?>">Lot Owners</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url().'/board-proposals/';?>">Board Proposals</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="<?php echo site_url().'/issues-tracking/';?>">Issues Tracking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url().'/bod-proposals/';?>">Board Proposals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url().'/lot-owners/';?>">Lot Owners</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo site_url().'/bod-contact-information/';?>">BOD Contact Info</a>
@@ -80,3 +80,9 @@
 
         <!-- Page content -->
         <main class="flex-grow-1 p-3 border-top border-bottom border-start">
+            <div class="container-md">
+                <div class="d-flex justify-content-end">
+                    <?php echo do_shortcode('[searchwp_form id=1]'); ?>
+                </div>
+            </div>
+            

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: BOD Contact Information
+ * Template Name: Contact Information
  */
 
 if ( ! is_user_logged_in() ) {

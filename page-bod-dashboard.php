@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: BOD Dashboard
+ * Template Name: Dashboard
  */
 
 if ( ! is_user_logged_in() ) {

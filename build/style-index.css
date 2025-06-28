@@ -402,6 +402,23 @@ li.nav-item a.nav-link.active {
   font-weight: 600;
 }
 
+.searchwp-live-search-results {
+  background-color: var(--header-bg-color) !important;
+}
+.searchwp-live-search-results h4.searchwp-live-search-result--title {
+  font-family: var(--bs-font-sans-serif) !important;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+#searchwp-form-1 input.swp-button {
+  background-color: rgb(33, 37, 41);
+  color: #ffffff;
+}
+#searchwp-form-1 input.swp-input {
+  padding: 4px;
+}
+
 .copyright {
   font-size: 0.875rem;
 }
@@ -560,6 +577,22 @@ table#tbl-compliance.table tbody tr td.no-action-data {
 }
 .page-board-proposals table tbody tr > td {
   vertical-align: baseline;
+}
+.page-board-proposals table#proposal-votes {
+  max-width: 175px;
+}
+.page-board-proposals ul.nav-pills .nav-link {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.page-proposal-detail table#proposal_votes td.vote-cell {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.page-proposal-detail table#proposal_votes td.vote-cell .form-check {
+  padding-left: 2;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
