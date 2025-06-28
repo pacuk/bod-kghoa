@@ -528,6 +528,10 @@ table#tbl-compliance.table tbody tr td.no-action-data {
   padding-right: 1rem;
 }
 
+.collapse {
+  transition: none !important;
+}
+
 .page-lot-owners table thead tr > th {
   vertical-align: bottom;
 }

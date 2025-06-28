@@ -36,3 +36,6 @@ table#tbl-compliance.table tbody tr td.no-action-data {
     background-color: rgb(232, 234, 235);
     padding-left: 1rem;
 }
+.collapse {
+    transition: none !important;
+}

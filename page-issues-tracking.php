@@ -10,14 +10,12 @@ if ( ! is_user_logged_in() ) {
 
 get_header( 'bod' );
 ?>
-
         <div class="page-issues-tracking container-md mt-4 mb-5">
-            <h1 class="pt-4 mb-0">Issues Tracking</h1>
+            <h1 class="pt-4 mb-4">Issues Tracking</h1>
 
-            <div>COMING SOON!</div>
-
-
-            <!--
+            <?php echo do_shortcode('[list-issues]');?>
+        
+<!--     
             <div class="fs-6 fw-normal fst-italic mb-5">Click row to reveal action</div>
             
             <div class="mb-4">
@@ -75,7 +73,7 @@ get_header( 'bod' );
                         <td><h6><span class="badge text-bg-success">In progress</span></h6></td>
                     </tr>
                     <tr id="detailRow1" class="collapse">
-                        <td class="action-data"><div class="fw-bold">Action log:</div></td>
+                        <td class="action-data align-top"><div class="fw-bold">Action log:</div></td>
                         <td colspan="5" class="action-data">                        
                             <table class="table table-borderless">
                                 <tr>
@@ -105,11 +103,11 @@ get_header( 'bod' );
                         <td><h6><span class="badge text-bg-primary">Closed</span></h6></td>
                     </tr>
                     <tr id="detailRow2" class="collapse">
-                        <td class="action-data"><div class="fw-bold">Action log:</div></td>
+                        <td class="action-data align-top"><div class="fw-bold">Action log:</div></td>
                         <td colspan="5" class="action-data">                        
                             <table class="table table-borderless">
                                 <tr>
-                                    <td>No data found.</td>
+                                    <td>No action log found.</td>
                                 </tr>
                             </table>
                         </td>
@@ -149,7 +147,7 @@ get_header( 'bod' );
 
                 </tbody>
             </table>
-            -->
+-->            
         </div>
 
 <?php get_footer();

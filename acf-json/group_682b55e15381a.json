@@ -526,10 +526,10 @@
                 "id": ""
             },
             "choices": {
-                "open": "Open New",
-                "ongoing": "Ongoing",
-                "followup": "F\/U Later",
-                "closed": "Closed"
+                "New Open": "New Open",
+                "Ongoing": "Ongoing",
+                "F\/U Later": "F\/U Later",
+                "Closed": "Closed"
             },
             "default_value": "open",
             "return_format": "value",
@@ -621,10 +621,9 @@
                         "id": ""
                     },
                     "choices": {
-                        "open": "Open New",
-                        "ongoing": "Ongoing",
-                        "followup": "F\/U Later",
-                        "closed": "Closed"
+                        "Ongoing": "Ongoing",
+                        "F\/U Later": "F\/U Later",
+                        "Closed": "Closed"
                     },
                     "default_value": false,
                     "return_format": "value",
@@ -721,5 +720,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1750364917
+    "modified": 1751141727
 }

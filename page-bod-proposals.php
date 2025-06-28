@@ -15,7 +15,7 @@ get_header( 'bod' );
         <div class="page-board-proposals container-md mt-4 mb-5">
             <h1 class="pt-4 mb-4">Board Proposals</h1>
 
-            <?php echo do_shortcode('[list-active-proposals]');?>
+            <?php echo do_shortcode('[list-board-proposals]');?>
         </div>
 <?php
 get_footer();
