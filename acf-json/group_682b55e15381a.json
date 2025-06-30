@@ -36,10 +36,11 @@
                 "id": ""
             },
             "choices": {
-                "compliance": "Compliance",
-                "complaint": "Complaint",
-                "inquiry": "Inquiry",
-                "hoa": "HOA-issue"
+                "Compliance": "Compliance",
+                "Issue": "Issue",
+                "Complaint": "Complaint",
+                "Inquiry": "Inquiry",
+                "HOA-issue": "HOA-issue"
             },
             "default_value": "compliance",
             "return_format": "value",
@@ -122,15 +123,13 @@
                 [
                     {
                         "field": "field_682b5653e0fa0",
-                        "operator": "==",
-                        "value": "compliance"
-                    }
-                ],
-                [
+                        "operator": "!=",
+                        "value": "HOA-issue"
+                    },
                     {
                         "field": "field_682b5653e0fa0",
-                        "operator": "==",
-                        "value": "complaint"
+                        "operator": "!=",
+                        "value": "Inquiry"
                     }
                 ]
             ],
@@ -467,14 +466,50 @@
                     {
                         "field": "field_682b5653e0fa0",
                         "operator": "==",
-                        "value": "inquiry"
+                        "value": "Compliance"
                     }
                 ],
                 [
                     {
                         "field": "field_682b5653e0fa0",
                         "operator": "==",
-                        "value": "hoa"
+                        "value": "Issue"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6862ca5f9f75a",
+            "label": "HOA Location",
+            "name": "hoa_location",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_682b5653e0fa0",
+                        "operator": "==",
+                        "value": "HOA-issue"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_682b5653e0fa0",
+                        "operator": "==",
+                        "value": "Inquiry"
                     }
                 ]
             ],
@@ -720,5 +755,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751141727
+    "modified": 1751304917
 }

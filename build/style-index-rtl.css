@@ -505,27 +505,28 @@ li.nav-item a.nav-link.active {
 table#tbl-compliance {
   font-size: 0.95rem;
 }
-
+table#tbl-compliance td, table#tbl-compliance table td {
+  vertical-align: text-top;
+}
 table#tbl-compliance.table tbody tr.clickable {
   cursor: pointer;
 }
-
 table#tbl-compliance.table tbody tr td.action-data {
   background-color: rgb(232, 234, 235);
   padding: 1.25rem 0.5rem 0.5rem 1.25rem;
 }
-
 table#tbl-compliance.table tbody tr td.action-data div {
   padding-bottom: 0.5rem;
 }
-
-table#tbl-compliance.table tbody tr td:first-of-type, table#tbl-compliance.table tbody tr td.action-data table tr td:first-of-type {
+table#tbl-compliance.table tbody tr td:first-of-type, table#tbl-compliance table#tbl-compliance.table tbody tr td.action-data table tr td:first-of-type {
   text-wrap: nowrap;
 }
-
 table#tbl-compliance.table tbody tr td.no-action-data {
   background-color: rgb(232, 234, 235);
   padding-right: 1rem;
+}
+table#tbl-compliance tr.subheading td {
+  background-color: rgba(0, 0, 0, 0.025);
 }
 
 .collapse {
