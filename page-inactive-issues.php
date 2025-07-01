@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Issues Tracking
+ * Template Name: Inactive Issues
  */
 
 if ( ! is_user_logged_in() ) {
@@ -10,10 +10,10 @@ if ( ! is_user_logged_in() ) {
 
 get_header( 'bod' );
 ?>
-        <div class="page-issues-tracking container-md mt-4 mb-5">
+        <div class="page-inactive-issues container-md mt-4 mb-5">
             <h1 class="pt-4 mb-4"><?php the_title(); ?></h1>
 
-            <?php echo do_shortcode('[list-issues]');?>
+            <?php echo do_shortcode('[list-inactive-issues]');?>
           
         </div>
 

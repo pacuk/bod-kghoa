@@ -12,7 +12,7 @@ get_header( 'bod' );
 ?>
 
         <div class="page-property-improvement-requests container-md mt-4 mb-5">
-            <h1 class="my-4 pt-4">Property Improvement Requests</h1>
+            <h1 class="my-4 pt-4"><?php the_title(); ?></h1>
 
             <?php echo do_shortcode('[hoa_current_projects]');?>
         </div>

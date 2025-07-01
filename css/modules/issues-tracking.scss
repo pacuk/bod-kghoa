@@ -1,42 +1,48 @@
-.select-custom {
-    max-width: 200px;
-    background-color:rgba(0,0,0,0.7) !important;
-    color: #fff !important;
-    border: none;
-}
+.page-issues-tracking, .page-inactive-issues {
+    .select-custom {
+        max-width: 200px;
+        background-color:rgba(0,0,0,0.7) !important;
+        color: #fff !important;
+        border: none;
+    }
 
-.select-custom option {
-    background-color: #fff;
-    color: #000;
-}
+    .select-custom option {
+        background-color: #fff;
+        color: #000;
+    }
 
+    ul.nav-pills .nav-link {
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
 
-table#tbl-compliance {
-    font-size: 0.95rem;
-    td, table td {
-        vertical-align: text-top;
+    table.tbl-compliance-issues {
+        font-size: 0.95rem;
+        td, table td {
+            vertical-align: text-top;
+        }
+        &.table tbody tr.clickable {
+            cursor: pointer;
+        }
+        &.table tbody tr td.action-data {
+            background-color: rgb(232, 234, 235);
+            padding:1.25rem 1.25rem 0.5rem 0.5rem;
+        }
+        &.table tbody tr td.action-data div{
+            padding-bottom: 0.5rem;
+        }
+        &.table tbody tr td:first-of-type, table#tbl-compliance.table tbody tr td.action-data table tr td:first-of-type {
+            text-wrap:nowrap;
+        }
+        &.table tbody tr td.no-action-data {
+            background-color: rgb(232, 234, 235);
+            padding-left: 1rem;
+        }
+        tr.subheading td {
+            background-color:rgba(0,0,0,0.025);           
+        } 
+        
     }
-    &.table tbody tr.clickable {
-        cursor: pointer;
-    }
-    &.table tbody tr td.action-data {
-        background-color: rgb(232, 234, 235);
-        padding:1.25rem 1.25rem 0.5rem 0.5rem;
-    }
-    &.table tbody tr td.action-data div{
-        padding-bottom: 0.5rem;
-    }
-    &.table tbody tr td:first-of-type, table#tbl-compliance.table tbody tr td.action-data table tr td:first-of-type {
-        text-wrap:nowrap;
-    }
-    &.table tbody tr td.no-action-data {
-        background-color: rgb(232, 234, 235);
-        padding-left: 1rem;
-    }
-    tr.subheading td {
-        background-color:rgba(0,0,0,0.025);           
-    } 
-    
 }
 
 .collapse {

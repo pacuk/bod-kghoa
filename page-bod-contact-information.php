@@ -13,7 +13,7 @@ get_header( 'bod' );
 
         <div class="page-bod-contact-information container-md mt-4 mb-5">
             
-            <h1 class="pt-4 mb-4">BOD Contact Information</h1>
+            <h1 class="pt-4 mb-4"><?php the_title(); ?></h1>
             <a href="<?php echo admin_url( 'profile.php' );?>" target="_blank" class="btn btn-secondary mb-3" role="button" type="button">Edit My Info</a>
                  
             <?php             

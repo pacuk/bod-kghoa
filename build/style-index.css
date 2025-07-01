@@ -490,42 +490,44 @@ li.nav-item a.nav-link.active {
   border-radius: 5px;
 }
 
-.select-custom {
+.page-issues-tracking .select-custom, .page-inactive-issues .select-custom {
   max-width: 200px;
   background-color: rgba(0, 0, 0, 0.7) !important;
   color: #fff !important;
   border: none;
 }
-
-.select-custom option {
+.page-issues-tracking .select-custom option, .page-inactive-issues .select-custom option {
   background-color: #fff;
   color: #000;
 }
-
-table#tbl-compliance {
+.page-issues-tracking ul.nav-pills .nav-link, .page-inactive-issues ul.nav-pills .nav-link {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.page-issues-tracking table.tbl-compliance-issues, .page-inactive-issues table.tbl-compliance-issues {
   font-size: 0.95rem;
 }
-table#tbl-compliance td, table#tbl-compliance table td {
+.page-issues-tracking table.tbl-compliance-issues td, .page-issues-tracking table.tbl-compliance-issues table td, .page-inactive-issues table.tbl-compliance-issues td, .page-inactive-issues table.tbl-compliance-issues table td {
   vertical-align: text-top;
 }
-table#tbl-compliance.table tbody tr.clickable {
+.page-issues-tracking table.tbl-compliance-issues.table tbody tr.clickable, .page-inactive-issues table.tbl-compliance-issues.table tbody tr.clickable {
   cursor: pointer;
 }
-table#tbl-compliance.table tbody tr td.action-data {
+.page-issues-tracking table.tbl-compliance-issues.table tbody tr td.action-data, .page-inactive-issues table.tbl-compliance-issues.table tbody tr td.action-data {
   background-color: rgb(232, 234, 235);
   padding: 1.25rem 1.25rem 0.5rem 0.5rem;
 }
-table#tbl-compliance.table tbody tr td.action-data div {
+.page-issues-tracking table.tbl-compliance-issues.table tbody tr td.action-data div, .page-inactive-issues table.tbl-compliance-issues.table tbody tr td.action-data div {
   padding-bottom: 0.5rem;
 }
-table#tbl-compliance.table tbody tr td:first-of-type, table#tbl-compliance table#tbl-compliance.table tbody tr td.action-data table tr td:first-of-type {
+.page-issues-tracking table.tbl-compliance-issues.table tbody tr td:first-of-type, .page-issues-tracking table.tbl-compliance-issues table#tbl-compliance.table tbody tr td.action-data table tr td:first-of-type, .page-inactive-issues table.tbl-compliance-issues.table tbody tr td:first-of-type, .page-inactive-issues table.tbl-compliance-issues table#tbl-compliance.table tbody tr td.action-data table tr td:first-of-type {
   text-wrap: nowrap;
 }
-table#tbl-compliance.table tbody tr td.no-action-data {
+.page-issues-tracking table.tbl-compliance-issues.table tbody tr td.no-action-data, .page-inactive-issues table.tbl-compliance-issues.table tbody tr td.no-action-data {
   background-color: rgb(232, 234, 235);
   padding-left: 1rem;
 }
-table#tbl-compliance tr.subheading td {
+.page-issues-tracking table.tbl-compliance-issues tr.subheading td, .page-inactive-issues table.tbl-compliance-issues tr.subheading td {
   background-color: rgba(0, 0, 0, 0.025);
 }
 

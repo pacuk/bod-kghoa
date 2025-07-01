@@ -15,7 +15,7 @@ get_header( 'bod' );
             <div class="row align-items-center mb-4">
                 <!-- Title: takes half the width on md+ screens, full width (stacked) on smaller -->
                 <div class="col-md-6">
-                    <h1 class="mt-4 mb-0">Lot Owners</h1>
+                    <h1 class="mt-4 mb-0"><?php the_title(); ?></h1>
                     <div class="fs-6 fw-normal fst-italic mb-3">Last updated 5/5/2024</div>
                 </div>
 
@@ -82,8 +82,8 @@ get_header( 'bod' );
                         echo '<tr>';
                         echo '<td>' . esc_html($row['lot_number']) . '</td>';
                         echo '<td>' . esc_html($row['section']) . '</td>';
-                        echo '<td class="text-center">' . ($row['is_rental'] ? 'Yes' : '') . '</td>';
-                        echo '<td>' . esc_html($row['address']) . '</td>';
+                        echo '<td style="width:66px" class="text-center">' . ($row['is_rental'] ? 'Yes' : '') . '</td>';
+                        echo '<td style="width:200px">' . esc_html($row['address']) . '</td>';
                         echo '<td>' . esc_html($row['owner']) . '</td>';
                         echo '<td>' . esc_html($row['mailing']) . '</td>';
                         echo '</tr>';

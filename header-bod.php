@@ -55,7 +55,7 @@
     <!-- Main layout: sidebar + content -->
     <div class="d-flex align-items-stretch">
         <!-- Static sidebar: visible md+ -->
-        <nav class="d-none d-md-block bg-yellow min-vh-100" style="width: 250px;">
+        <nav class="d-none d-md-block bg-yellow min-vh-100" style="width:250px;">
             <ul class="nav flex-column p-3">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="<?php echo site_url().'/bod-dashboard/';?>">Dashboard</a>
