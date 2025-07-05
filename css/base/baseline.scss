@@ -53,3 +53,54 @@ table tr > th, table tr > td {
 textarea {
     width: 100%;
 }
+.pagination {
+  margin-top: 1em;
+  text-align: center;
+}
+.pagination .page-numbers {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 0.4em 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color:#000;
+  &:hover {
+    background:#000;
+    color:#fff;
+    text-decoration: none;
+  }
+}
+.pagination .current {
+  background: #999; //#0073aa;
+  border-radius: 4px;
+  color: #fff;
+  border-color: #666; //#0073aa;
+  &:hover {
+    background:#999;
+  }
+}
+
+table.myvote {
+    td.vote-cell { 
+        background-color: rgba(0,0,0,0.25);
+        .form-check {
+            padding-left: 2;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+.btn:hover {
+    text-decoration: none;
+}
+.btn-inactive {
+    color:#fff;
+    background-color: #6c757d;
+    border:1px solid #6c757d;
+    &:hover {
+        color:#fff;
+        background-color:#063883;
+        border:1px solid #063883;
+        text-decoration: none;
+    }
+}

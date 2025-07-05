@@ -25,7 +25,7 @@ get_header( 'bod' );
 
                 // Setup
                 $table = 'kghdd_lots'; 
-                $per_page = 56;
+                $per_page = 40;
                 $paged = max(1, get_query_var('paged') ?: get_query_var('page') ?: 1);
                 $offset = ($paged - 1) * $per_page;
 
@@ -72,6 +72,20 @@ get_header( 'bod' );
                     endif;
                 echo '</form>';
 
+                $total_pages = ceil($total / $per_page);
+                if ($total_pages > 1) {
+                    echo '<div class="pagination">';
+                    echo paginate_links([
+                        'base'      => get_permalink() . '?lot_search=' . urlencode($search) . '&paged=%#%',
+                        'format'    => '',
+                        'current'   => $paged,
+                        'total'     => $total_pages,
+                        'prev_text' => '&laquo;',
+                        'next_text' => '&raquo;',
+                    ]);
+
+                    echo '</div>';
+                }
 
                 echo '<table class="lot-table"><thead><tr>';
                 echo '<th>Lot #</th><th>Section</th><th>Rental</th><th>Address</th><th>Owner</th><th>Mailing Address</th>';

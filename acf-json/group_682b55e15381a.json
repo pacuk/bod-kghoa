@@ -66,7 +66,14 @@
                     {
                         "field": "field_682b5653e0fa0",
                         "operator": "==",
-                        "value": "inquiry"
+                        "value": "Complaint"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_682b5653e0fa0",
+                        "operator": "==",
+                        "value": "Inquiry"
                     }
                 ]
             ],
@@ -454,42 +461,6 @@
             "save_options": 0
         },
         {
-            "key": "field_6851bd0cc64fd",
-            "label": "Location",
-            "name": "location",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_682b5653e0fa0",
-                        "operator": "==",
-                        "value": "Compliance"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_682b5653e0fa0",
-                        "operator": "==",
-                        "value": "Issue"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6862ca5f9f75a",
             "label": "HOA Location",
             "name": "hoa_location",
@@ -545,6 +516,96 @@
             "rows": "",
             "placeholder": "",
             "new_lines": ""
+        },
+        {
+            "key": "field_68695eeccdc88",
+            "label": "Vote Needed",
+            "name": "vote_needed",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_682b5653e0fa0",
+                        "operator": "==",
+                        "value": "Compliance"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_682b5653e0fa0",
+                        "operator": "==",
+                        "value": "Issue"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Yes": "Yes",
+                "No": "No"
+            },
+            "default_value": "No",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_68659257580c7",
+            "label": "Send Owner Notice?",
+            "name": "send_owner_notice",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Select 'Yes' if Board votes to send notice. Select 'No' if Board rejects proposal to send notice. TBD - To be determined. N\/A - Not applicable.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_682b5653e0fa0",
+                        "operator": "==",
+                        "value": "Compliance"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_682b5653e0fa0",
+                        "operator": "==",
+                        "value": "Issue"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "N\/A": "N\/A",
+                "TBD": "TBD",
+                "Yes": "Yes",
+                "No": "No"
+            },
+            "default_value": "N\/A",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_682b58f1e0fa6",
@@ -755,5 +816,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1751304917
+    "modified": 1751738970
 }

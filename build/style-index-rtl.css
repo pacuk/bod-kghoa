@@ -383,6 +383,60 @@ textarea {
   width: 100%;
 }
 
+.pagination {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.pagination .page-numbers {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 0.4em 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #000;
+}
+.pagination .page-numbers:hover {
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.pagination .current {
+  background: #999;
+  border-radius: 4px;
+  color: #fff;
+  border-color: #666;
+}
+.pagination .current:hover {
+  background: #999;
+}
+
+table.myvote td.vote-cell {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+table.myvote td.vote-cell .form-check {
+  padding-right: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn-inactive {
+  color: #fff;
+  background-color: #6c757d;
+  border: 1px solid #6c757d;
+}
+.btn-inactive:hover {
+  color: #fff;
+  background-color: #063883;
+  border: 1px solid #063883;
+  text-decoration: none;
+}
+
 /* load modules */
 .bg-yellow {
   background-color: var(--header-bg-color);
@@ -466,6 +520,20 @@ li.nav-item a.nav-link.active {
   vertical-align: baseline;
 }
 
+.page-project-detail {
+  /*
+      table#project_votes {
+          td.vote-cell { 
+              background-color: rgba(0,0,0,0.25);
+              .form-check {
+                  padding-left: 2;
+                  display: flex;
+                  justify-content: center;
+              }
+          }
+      }
+  */
+}
 .page-project-detail .back-button-loc {
   text-align: right;
 }
@@ -473,14 +541,6 @@ li.nav-item a.nav-link.active {
   .page-project-detail .back-button-loc {
     text-align: left;
   }
-}
-.page-project-detail table#project_votes td.vote-cell {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-.page-project-detail table#project_votes td.vote-cell .form-check {
-  padding-right: 2;
-  display: flex;
-  justify-content: center;
 }
 .page-project-detail .comment-form #submit.submit {
   background-color: #0d6efd;
@@ -555,21 +615,6 @@ li.nav-item a.nav-link.active {
 .page-lot-owners .lot-table th {
   background: #f4f4f4;
 }
-.page-lot-owners .pagination {
-  margin-top: 1em;
-  text-align: center;
-}
-.page-lot-owners .pagination .page-numbers {
-  display: inline-block;
-  margin: 0 4px;
-  padding: 0.4em 0.8em;
-  border: 1px solid #ccc;
-}
-.page-lot-owners .pagination .current {
-  background: #0073aa;
-  color: #fff;
-  border-color: #0073aa;
-}
 .page-lot-owners .lot-search {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -593,11 +638,17 @@ li.nav-item a.nav-link.active {
   font-size: 1.25rem;
 }
 
-.page-proposal-detail table#proposal_votes td.vote-cell {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-.page-proposal-detail table#proposal_votes td.vote-cell .form-check {
-  padding-right: 2;
-  display: flex;
-  justify-content: center;
+.page-proposal-detail {
+  /*
+      table#proposal_votes {
+          td.vote-cell { 
+              background-color: rgba(0,0,0,0.25);
+              .form-check {
+                  padding-left: 2;
+                  display: flex;
+                  justify-content: center;
+              }
+          }
+      }
+  */
 }

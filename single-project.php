@@ -70,7 +70,7 @@ $vote_totals = kghoa_get_vote_totals(get_the_ID());
 			
 			<form id="hoa-vote-form" method="post" action="">
 				<input type="hidden" name="project_id" value="<?= get_the_ID(); ?>" />
-				<table id="project_votes" class="table table-bordered border-dark">
+				<table id="project_votes" class="myvote table table-bordered border-dark">
 					<thead>
 						<?php echo $vote_msg; ?>
 						<th class="text-center">Approve</th>

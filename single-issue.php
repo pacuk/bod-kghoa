@@ -9,10 +9,15 @@ if ( ! is_user_logged_in() ) {
 
 get_header( 'bod' );
 
-    $proposal_date = get_field('proposal_date');
+// ISSUE TYPES: Compliance, Issue, Complaint, Inquiry, HOA-issue
+// STATUS: New Open, Ongoing, F/U Later, Closed
+
+    $posted_date = get_field('posted_date');
+    $type_issue = get_field('type_issue');
     $status = get_field('status');
     $badge = kghoa_translate_status_to_badge($status);
-    $can_vote = in_array($status, ['Under Review']);
+    $send_owner_notice = get_field('send_owner_notice');
+    $can_vote = in_array($send_owner_notice, ['Yes','TBD']);
     $vote_msg = (!$can_vote)? ('<td class="text-center fw-semibold text-danger">Voting is closed</td>') : '<td class="text-center fw-semibold text-success">Voting is open</td>';
     if($admin = current_user_can( 'edit_posts' )){
         $can_vote = false;
@@ -21,91 +26,62 @@ get_header( 'bod' );
     $my_vote = kghoa_get_board_member_project_vote(get_the_ID());
     $displayMyVote = ($my_vote)?' checked':'';
     $vote_totals = kghoa_get_vote_totals(get_the_ID());
-
-
-    if(null !== (get_field('proposed_timeline'))){
-        $proposed_timeline = '
-                                    <div class="fw-bold mt-2"><small>PROPOSED TIMELINE</small></div>
-                                    <div>' . esc_html(get_field("proposed_timeline")) . '</div>
-        ';
-    } else {
-        $proposed_timeline = '';
-    }
-
-    if(null !== (get_field('recommendation'))){
-        $recommendation = '
-                                    <div class="fw-bold mt-2"><small>RECOMMENDATION</small></div>
-                                    <div>' . esc_html(get_field("recommendation")) . '</div>
-        ';
-    } else {
-        $recommendation = '';
-    }
-
-    if(null !== (get_field('final_decision'))){
-        $final_decision = '
-                                    <div class="fw-bold mt-2"><small>FINAL BOARD DECISION</small></div>
-                                    <div>' . esc_html(get_field("final_decision")) . '</div>        
-        ';
-    } else {
-        $final_decision = '';
-    }         
+    $date_closed = get_field('date_closed');
+    $actionLog = get_field('action_log');
+    $buttonLink = ($status == 'Closed')?'inactive-issues':'issues-tracking';
+           
     echo '
-                <div class="page-proposal-detail container-md mt-4 mb-5">
-                    <a href="/bod-proposals/" class="btn btn-dark" role="button">Back to Proposal List</a>
+                <div class="page-issue-detail container-md mt-4 mb-5">
+                    <a href="/'.$buttonLink.'/" class="btn btn-dark" role="button">Back to Issue List</a>
                     <h1 class="mt-2 mb-2 mb-lg-4">' . esc_html(get_the_title()) . '</h1>
     
                     <div class="row mb-4 pb-4">
                         <div class="col-md-7">
                             <div class="card">
                                 <div class="card-body">
-                                    <div><span class=""><small>Posted ' . esc_html($proposal_date) . '</small></span></div>
+                                    <div><span class=""><small>Posted ' . esc_html($posted_date) . '</small></span></div>
                                     <h5>' . $badge . '</h5>
                                     <div class="fw-bold mt-3"><small>DESCRIPTION</small></div>
                                     <div>' . esc_html(get_field("description")) . '</div>
-                    ';
-
-        if(have_rows('vendors')):
-            echo '<div class="fw-bold mt-2"><small>VENDORS</small></div>';
-            while(have_rows('vendors')): the_row();
-                $vendor = get_sub_field('vendor');
-                $quote = get_sub_field('quote');
-
-                echo '
-                                    <ul>
-                                        <li><span class="fw-bold">'.$vendor.'</span><br>
-                                            <div>Quote: '.$quote.'</div>
-                            ';
-
-                if(have_rows('documentation')){
-                    echo '
-                                            <div>Documentation:</div>
-                                ';
-                    while(have_rows('documentation')){
-                        the_row();
-                        $file = get_sub_field('document');
-                        echo '
-                                            <div><a href="'. $file['url'] .'" target="_blank">'. $file['filename'] .'</a></div>
                                     ';
-                    }
-                }
-                echo '
-                                        </li>
-                                    </ul>
-                            ';
-            endwhile;
-        else:
-            echo '<div>No vendor information recorded.</div>';
-        endif;
+    if(have_rows('action_log')):
+        echo '
+                                    <table class="tbl-issue table table-responsive table-sm mt-4">
+                                        <thead class="table-secondary border-top border-secondary-subtle">
+                                            <tr>
+                                                <th colspan="2">Action Log</th>
+                                        </thead>
+                                        <tbody> 
+        ';
+                while(have_rows('action_log')):
+                    the_row();
+                    echo '  
+                                            <tr>
+                                                <td style="width:105px">'.get_sub_field('log_date').'</td>
+                                                <td>'.get_sub_field('entry').'</td>
+                                            </tr>
+                    ';        
+                endwhile;
+                echo ' 
+                                        </tbody> 
+                                    </table>        
+            ';
+            endif;
 
-        echo $recommendation.$proposed_timeline.$final_decision.'
+
+    echo '
                                 </div>
                             </div>
                         </div>
                         
                         <div class="col-md-5">
-                            <form id="proposal-vote-form" method="post" action="">
-                                <input type="hidden" name="project_id" value="'. get_the_ID() .'" />
-                                <table id="proposal_votes" class="myvote table table-bordered border-dark">
+                        ';
+    if(!in_array($send_owner_notice, ['N/A', ''])){
+
+        echo '
+                            <form id="issue-vote-form" method="post" action="">
+                                <input type="hidden" name="issue_id" value="'. get_the_ID() .'" />
+                                <table id="issue_votes" class="myvote table table-bordered border-dark">
                                     <thead>
                                         '. $vote_msg. '
                                         <th class="text-center">Approve</th>
@@ -139,6 +115,9 @@ get_header( 'bod' );
                                     </tbody>
                                 </table>
                             </form>
+            ';
+        }
+        echo '
                         </div>
                     </div>
                 </div>';
