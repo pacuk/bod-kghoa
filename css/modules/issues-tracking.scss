@@ -20,6 +20,12 @@
         font-size: 0.95rem;
         td, table td {
             vertical-align: text-top;
+            a {
+                color:inherit;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
         &.table tbody tr.clickable {
             cursor: pointer;
@@ -41,6 +47,10 @@
         tr.subheading td {
             background-color:rgba(0,0,0,0.025);           
         } 
+        tr.newIssueCat td h4 {
+            font-family: var(--bs-font-sans-serif);
+            font-weight: 900;
+        }
         
     }
 }

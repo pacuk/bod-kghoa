@@ -570,6 +570,12 @@ li.nav-item a.nav-link.active {
 .page-issues-tracking table.tbl-compliance-issues td, .page-issues-tracking table.tbl-compliance-issues table td, .page-inactive-issues table.tbl-compliance-issues td, .page-inactive-issues table.tbl-compliance-issues table td {
   vertical-align: text-top;
 }
+.page-issues-tracking table.tbl-compliance-issues td a, .page-issues-tracking table.tbl-compliance-issues table td a, .page-inactive-issues table.tbl-compliance-issues td a, .page-inactive-issues table.tbl-compliance-issues table td a {
+  color: inherit;
+}
+.page-issues-tracking table.tbl-compliance-issues td a:hover, .page-issues-tracking table.tbl-compliance-issues table td a:hover, .page-inactive-issues table.tbl-compliance-issues td a:hover, .page-inactive-issues table.tbl-compliance-issues table td a:hover {
+  text-decoration: none;
+}
 .page-issues-tracking table.tbl-compliance-issues.table tbody tr.clickable, .page-inactive-issues table.tbl-compliance-issues.table tbody tr.clickable {
   cursor: pointer;
 }
@@ -589,6 +595,10 @@ li.nav-item a.nav-link.active {
 }
 .page-issues-tracking table.tbl-compliance-issues tr.subheading td, .page-inactive-issues table.tbl-compliance-issues tr.subheading td {
   background-color: rgba(0, 0, 0, 0.025);
+}
+.page-issues-tracking table.tbl-compliance-issues tr.newIssueCat td h4, .page-inactive-issues table.tbl-compliance-issues tr.newIssueCat td h4 {
+  font-family: var(--bs-font-sans-serif);
+  font-weight: 900;
 }
 
 .collapse {

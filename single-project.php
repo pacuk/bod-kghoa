@@ -28,9 +28,6 @@ if($decision_process == 'ratified') $decision_process = 'In-person Meeting';
 $closed = get_field('closed');
 $comments = get_field('comments');
 $comments_allowed_statuses = ['Under Review', 'Pending', 'Awaiting Ratification', 'On Hold'];
-$my_vote = kghoa_get_board_member_project_vote(get_the_ID());
-$displayMyVote = ($my_vote)?' checked':'';
-$vote_totals = kghoa_get_vote_totals(get_the_ID());
 
 ?>
 <div class="page-project-detail container-md mt-4 mb-5">
@@ -66,42 +63,7 @@ $vote_totals = kghoa_get_vote_totals(get_the_ID());
 
 		<!-- right side column VOTING TABLE -->
 		<div class="col-lg-6">
-					<?php //echo do_shortcode('[hoa_vote_table]');?>
-			
-			<form id="hoa-vote-form" method="post" action="">
-				<input type="hidden" name="project_id" value="<?= get_the_ID(); ?>" />
-				<table id="project_votes" class="myvote table table-bordered border-dark">
-					<thead>
-						<?php echo $vote_msg; ?>
-						<th class="text-center">Approve</th>
-						<th class="text-center">Disapprove</th>
-						<th class="text-center">Abstain</th>
-					</thead>
-					<tbody>
-						<tr>
-							<th>My Vote</th>
-							<?php for($i = 1; $i <= 3; $i++): 
-								if($i == 1) { $vID = 'yes'; } 
-								elseif($i == 2) { $vID = 'no'; }
-								else { $vID = 'abstain';}							
-								?> 						
-							<td class="vote-cell">
-								<div class="form-check mt-1">
-									<input class="form-check-input ml-1 border-dark" type="radio" name="vote" id="vote-<?= $vID ?>" value="<?= $i ?>" data-id="9999"<?= $can_vote ? '' : ' disabled readonly';?><?= ($my_vote == $i)? $displayMyVote : ''; ?> />
-								</div>
-							</td>
-							<?php endfor;?>
-						</tr>
-						<tr>
-							<th>Total Votes</th>
-							<td class="vote-cell"><div id="total-yes" class="totalvotes fw-bold text-center"><?= $vote_totals[1] ?></div></td>
-							<td class="vote-cell"><div id="total-no" class="totalvotes fw-bold text-center"><?= $vote_totals[2] ?></div></td>
-							<td class="vote-cell"><div id="total-abstain" class="totalvotes fw-bold text-center"><?= $vote_totals[3] ?></div></td>
-						</tr>
-					</tbody>
-				</table>
-			</form>
-			<?php 
+			<?php echo kghoa_get_proposal_vote_table(get_the_ID(), $vote_msg, $can_vote);
 				if($admin) {
 					echo kghoa_get_who_voted_list(get_the_ID());
 				}	

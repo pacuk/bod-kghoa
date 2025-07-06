@@ -18,10 +18,6 @@ get_header( 'bod' );
         $can_vote = false;
         $vote_msg = '<td class="text-center fw-semibold text-danger">Voting closed to admin</td>';
     } 
-    $my_vote = kghoa_get_board_member_project_vote(get_the_ID());
-    $displayMyVote = ($my_vote)?' checked':'';
-    $vote_totals = kghoa_get_vote_totals(get_the_ID());
-
 
     if(null !== (get_field('proposed_timeline'))){
         $proposed_timeline = '
@@ -103,42 +99,14 @@ get_header( 'bod' );
                         </div>
                         
                         <div class="col-md-5">
-                            <form id="proposal-vote-form" method="post" action="">
-                                <input type="hidden" name="project_id" value="'. get_the_ID() .'" />
-                                <table id="proposal_votes" class="myvote table table-bordered border-dark">
-                                    <thead>
-                                        '. $vote_msg. '
-                                        <th class="text-center">Approve</th>
-                                        <th class="text-center">Disapprove</th>
-                                        <th class="text-center">Abstain</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th>My Vote</th>
-        ';
-            for($i = 1; $i <= 3; $i++): 
-                if($i == 1) { $vID = 'yes'; } 
-                elseif($i == 2) { $vID = 'no'; }
-                else { $vID = 'abstain';}							
-                                            echo '     						
-                                            <td class="vote-cell">
-                                                <div class="form-check mt-1">
-                                                    <input class="form-check-input ml-1 border-dark" type="radio" name="vote" id="vote-'. $vID .'" value="'. $i .'" data-id="9999"'. ($can_vote ? '' : ' disabled readonly') . (($my_vote == $i)? $displayMyVote : '') .' />
-                                                </div>
-                                            </td>
-                                            ';
-            endfor;
-            echo '
-                                        </tr>
-                                        <tr>
-                                            <th>Total Votes</th>
-                                            <td class="vote-cell"><div id="total-yes" class="totalvotes fw-bold text-center">'. $vote_totals[1] .'</div></td>
-                                            <td class="vote-cell"><div id="total-no" class="totalvotes fw-bold text-center">'. $vote_totals[2] .'</div></td>
-                                            <td class="vote-cell"><div id="total-abstain" class="totalvotes fw-bold text-center">'. $vote_totals[3] .'</div></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </form>
+            ';
+        echo kghoa_get_proposal_vote_table(get_the_ID(), $vote_msg, $can_vote);
+				if($admin) {
+					echo kghoa_get_who_voted_list(get_the_ID());
+				}	
+		echo '	
+			                <div class="fst-italic">NOTE: You may change your vote while voting is open.</div>
+                            
                         </div>
                     </div>
                 </div>';
