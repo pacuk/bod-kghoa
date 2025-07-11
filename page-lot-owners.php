@@ -13,14 +13,13 @@ get_header( 'bod' );
 
         <div class="page-lot-owners container-md mt-4 mb-5">
             <div class="row align-items-center mb-4">
-                <!-- Title: takes half the width on md+ screens, full width (stacked) on smaller -->
                 <div class="col-md-6">
                     <h1 class="mt-4 mb-0"><?php the_title(); ?></h1>
                     <div class="fs-6 fw-normal fst-italic mb-3">Last updated 5/5/2024</div>
                 </div>
 
-                <?php 
-
+                <?php echo do_shortcode('[hoa-lot-owners]');
+/*
                 global $wpdb;
 
                 // Setup
@@ -122,7 +121,7 @@ get_header( 'bod' );
 
                     echo '</div>';
                 }
-                ?>
+               */ ?>
 
             </div>
         </div>
